@@ -1,0 +1,9 @@
+<h2>Note List</h2>
+<ul class="heroes">
+  <li *ngFor="let n of notes" [class.selected]="n === selectedNote" (click)="onSelect(n)"><span class="badge">{{ n.id}}</span>{{n.content}}</li>
+</ul>
+ <app-note-detail [note]="selectedNote"></app-note-detail> 
+<!-- <div *ngIf="selectedNote">
+  <h1>{{selectedNote.content}}</h1>
+  <input type="text" [(ngModel)]="selectedNote.content" />
+  </div> -->
